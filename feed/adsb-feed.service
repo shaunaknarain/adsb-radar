@@ -1,0 +1,18 @@
+[Unit]
+Description=ADSB WebSocket Feed
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/adsb-feed
+Environment=PORT=3001
+Environment=AIRCRAFT_URL=http://127.0.0.1:8080/data/aircraft.json
+Environment=ALLOWED_ORIGINS=https://shaunaknarain.com,https://www.shaunaknarain.com
+ExecStart=/usr/bin/node /home/pi/adsb-feed/server.js
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=Cloudflare Tunnel
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/cloudflared tunnel --config /etc/cloudflared/config.yml run adsb-feed
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
