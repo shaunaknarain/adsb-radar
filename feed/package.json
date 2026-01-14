@@ -1,0 +1,13 @@
+{
+  "name": "adsb-feed",
+  "version": "1.0.0",
+  "description": "Relays live ADS-B aircraft positions from dump1090-fa to browsers over WebSocket",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^8.19.0"
+  }
+}
