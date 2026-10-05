@@ -1,0 +1,7 @@
+[Unit]
+Description=ADS-B Pi health check + phone alerts
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/adsb-watchdog.sh
