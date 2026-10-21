@@ -1,0 +1,8 @@
+# /etc/cloudflared/config.yml — copy and fill in; never commit the real one.
+tunnel: <TUNNEL_UUID>
+credentials-file: /etc/cloudflared/<TUNNEL_UUID>.json
+
+ingress:
+  - hostname: feed.example.com
+    service: ws://localhost:3001
+  - service: http_status:404

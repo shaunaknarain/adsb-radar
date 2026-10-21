@@ -1,0 +1,12 @@
+node_modules/
+.DS_Store
+
+# secrets: tunnel credentials, feeder keys, local config
+*.pem
+.cloudflared/
+cloudflared/config.yml
+*.ini
+piaware.conf
+feeder_id
+.env
+/etc/
