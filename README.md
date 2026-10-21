@@ -1,3 +1,4 @@
+#**Note: I've been working on this project locally since December 2025**
 # ADS-B Radar
 
 A Raspberry Pi picks up radio signals from nearby aircraft and streams their positions live to my personal site, [shaunaknarain.com](https://shaunaknarain.com). Planes drift across the page background in real time.
@@ -50,20 +51,4 @@ pi/     watchdog script + timer, Cloudflare Tunnel unit, example tunnel config
 tools/  range measurement script and log
 ```
 
-## Running it
 
-```bash
-# on the Pi, with dump1090-fa running
-cd feed && npm ci
-PORT=3001 ALLOWED_ORIGINS=https://example.com node server.js
-
-# watchdog
-sudo install -m755 pi/adsb-watchdog.sh /usr/local/bin/
-sudo cp pi/adsb-watchdog.{service,timer} /etc/systemd/system/
-sudo systemctl enable --now adsb-watchdog.timer
-
-# range report
-RX_LAT=<lat> RX_LON=<lon> python3 tools/range.py "label for this run"
-```
-
-Set `HOME` in `web/main.js` to roughly your receiver's location. The page centers its map there.
