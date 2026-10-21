@@ -37,7 +37,7 @@ window.addEventListener("resize", resize);
 resize();
 
 // ---- CONFIG ----
-const HOME = { lat: 37.77, lon: -122.42 }; // map center: set near your receiver (rounded on purpose)
+const HOME = { lat: 37.80, lon: -122.41 }; // North Beach, SF (rounded to ~1 km on purpose)
 const RANGE_KM = 10; // how far out to show
 const MAX_PREDICT_S = 30; // keep gliding without updates (seconds)
 const STALE_REMOVE_S = 45; // remove if no update (seconds)
