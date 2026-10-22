@@ -16,3 +16,7 @@ A Raspberry Pi 4b picks up radio signals from nearby aircraft via an 1090 mhz an
 - **`web/`** is a dependency-free canvas page. ADS-B updates arrive about once a second, so between updates it estimates where each plane is from its track and ground speed. It then eases the drawn position toward that estimate so planes glide smoothly instead of jumping. New planes fade in, and planes that stop reporting fade out and are removed.
 
 The same Pi also feeds FlightAware (PiAware) and Flightradar24.
+
+## Hardware
+
+See [HARDWARE.md](HARDWARE.md) for the full parts list with links.
